@@ -6,8 +6,6 @@ import { SideBarComponent } from '../../components/side-bar/side-bar.component';
   standalone: true,
   imports: [SideBarComponent],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  styleUrl: './main.component.scss',
 })
-export class MainComponent {
-
-}
+export class MainComponent {}
