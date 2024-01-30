@@ -4,10 +4,11 @@
   .side-bar {
     background-color: $bg-color-dark-blue;
     width: fit-content;
-    min-height: 70vh;
     padding: 24px 15px;
     position: absolute;
-    border-radius: 0px 20px 20px 0px;
+    // min-height: 70vh;
+    // border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 0px 20px 0px;
     color: lightgray;
     display: none;
     transform: translateX(-300px);
