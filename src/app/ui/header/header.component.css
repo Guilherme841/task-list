@@ -1,0 +1,23 @@
+header {
+  background-color: rgb(0, 46, 53);
+  padding: 18px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+header nav h1 {
+  color: lightgray;
+  text-align: center;
+}
+header nav .container-icon-menu {
+  display: grid;
+  gap: 5px;
+}
+header nav .container-icon-menu .row-menu {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+}/*# sourceMappingURL=header.component.css.map */
