@@ -1,7 +1,7 @@
-$bg-color-side-bar: rgb(0, 46, 53);
+@import "../../sass/variables";
 
 .side-bar {
-  background-color: $bg-color-side-bar;
+  background-color: $bg-color-dark-blue;
   width: fit-content;
   min-height: 70vh;
   padding: 24px 15px;

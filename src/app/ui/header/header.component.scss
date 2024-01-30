@@ -1,7 +1,7 @@
-$bg-color-header: rgb(0, 46, 53);
+@import "../../sass/variables";
 
 header {
-  background-color: $bg-color-header;
+  background-color: $bg-color-dark-blue;
   padding: 18px;
   nav {
     display: flex;
