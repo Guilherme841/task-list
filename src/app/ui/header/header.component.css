@@ -11,10 +11,12 @@ header nav {
 header nav h1 {
   color: lightgray;
   text-align: center;
+  margin: 0;
 }
 header nav .container-icon-menu {
   display: grid;
   gap: 5px;
+  padding: 10px;
 }
 @media screen and (min-width: 900px) {
   header nav .container-icon-menu {
@@ -22,22 +24,18 @@ header nav .container-icon-menu {
   }
 }
 header nav .container-icon-menu .row-menu {
-  transition: transform 150ms, opacity 150ms;
+  transition: transform 150ms, opacity 100ms;
   width: 20px;
   height: 3px;
   background-color: white;
 }
-header nav .container-icon-menu .container-icon-menu-open {
-  gap: 0px;
-}
 header nav .container-icon-menu .row1 {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(11px);
 }
 header nav .container-icon-menu .row2 {
   opacity: 0;
-  position: absolute;
+  transform: translateX(-20px);
 }
 header nav .container-icon-menu .row3 {
-  position: absolute;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(-11px);
 }/*# sourceMappingURL=header.component.css.map */

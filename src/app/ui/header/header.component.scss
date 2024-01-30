@@ -11,33 +11,33 @@ header {
     h1 {
       color: lightgray;
       text-align: center;
+      margin: 0;
     }
     .container-icon-menu {
       display: grid;
       gap: 5px;
+      padding: 10px;
       @media screen and (min-width: 900px) {
         display: none;
       }
       .row-menu {
-        transition: transform 150ms, opacity 150ms;
+        transition: transform 150ms, opacity 100ms;
         width: 20px;
         height: 3px;
         background-color: white;
       }
-      .container-icon-menu-open {
-        gap: 0px;
-      }
       .row1 {
-        transform: rotate(45deg);
+        // position: absolute;
+        transform: rotate(45deg) translateY(11px);
       }
       .row2 {
-        // display: none;
         opacity: 0;
-        position: absolute;
+        transform: translateX(-20px);
+        // position: absolute;
       }
       .row3 {
-        position: absolute;
-        transform: rotate(-45deg);
+        // position: absolute;
+        transform: rotate(-45deg) translateY(-11px);
       }
     }
   }
