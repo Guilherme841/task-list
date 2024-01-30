@@ -1,5 +1,4 @@
-@if (booleanMenu) {
-<section class="side-bar">
+<section class="side-bar" [class.open]="booleanMenu" [class.hide]="!booleanMenu">
   <div class="container-side-bar">
     <button class="btn">Adicionar</button>
     <button class="btn">Remover</button>
@@ -8,4 +7,3 @@
     <button class="btn">Lixeira</button>
   </div>
 </section>
-}

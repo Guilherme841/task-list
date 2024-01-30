@@ -16,6 +16,11 @@ header nav .container-icon-menu {
   display: grid;
   gap: 5px;
 }
+@media screen and (min-width: 900px) {
+  header nav .container-icon-menu {
+    display: none;
+  }
+}
 header nav .container-icon-menu .row-menu {
   width: 20px;
   height: 3px;

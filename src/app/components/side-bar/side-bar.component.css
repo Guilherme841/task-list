@@ -7,6 +7,8 @@
   margin: 10px 0px;
   border-radius: 0px 20px 20px 0px;
   color: lightgray;
+  display: none;
+  transform: translateX(-300px);
 }
 .side-bar .container-side-bar {
   display: grid;
@@ -19,4 +21,31 @@
   border: 0;
   border-radius: 5px;
   background-color: rgb(0, 58, 67);
+}
+
+.open {
+  animation: faded-in 100ms ease-in-out forwards;
+  display: block;
+}
+@keyframes faded-in {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hide {
+  animation: faded-out 100ms ease-in-out forwards;
+}
+@keyframes faded-out {
+  from {
+    display: block;
+    transform: translateX(0);
+  }
+  to {
+    display: none;
+    transform: translateX(-300px);
+  }
 }/*# sourceMappingURL=side-bar.component.css.map */
