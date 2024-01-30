@@ -22,7 +22,22 @@ header nav .container-icon-menu {
   }
 }
 header nav .container-icon-menu .row-menu {
+  transition: transform 150ms, opacity 150ms;
   width: 20px;
   height: 3px;
   background-color: white;
+}
+header nav .container-icon-menu .container-icon-menu-open {
+  gap: 0px;
+}
+header nav .container-icon-menu .row1 {
+  transform: rotate(45deg);
+}
+header nav .container-icon-menu .row2 {
+  opacity: 0;
+  position: absolute;
+}
+header nav .container-icon-menu .row3 {
+  position: absolute;
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=header.component.css.map */

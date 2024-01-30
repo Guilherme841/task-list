@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderService } from '../../services/header-service/header.service';
 
 @Component({
@@ -10,8 +10,10 @@ import { HeaderService } from '../../services/header-service/header.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  showMenu: boolean = false;
   constructor(private _headerService: HeaderService) {}
   toggleMenu() {
     HeaderService.toggleMenu.emit();
+    this.showMenu = !this.showMenu;
   }
 }
