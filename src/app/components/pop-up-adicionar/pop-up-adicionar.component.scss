@@ -6,15 +6,19 @@
   inset: 0;
   background-color: rgba(0, 161, 104, 0.289);
   .container-pop-up {
+    padding: 14px;
     position: absolute;
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     background-color: rgba(70, 255, 70, 0.494);
     .container-title {
       display: flex;
       align-items: center;
-      h1 {
-        margin: 0;
+      justify-content: space-between;
+    }
+    .container-text-area {
+      .text-area {
+        width: 100%;
       }
     }
   }
