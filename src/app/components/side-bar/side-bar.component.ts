@@ -12,7 +12,6 @@ import { HeaderService } from '../../services/header-service/header.service';
 export class SideBarComponent implements OnInit {
   booleanMenu: boolean = false;
   constructor(private _headerService: HeaderService) {}
-
   ngOnInit(): void {
     HeaderService.toggleMenu.subscribe(() => {
       this.booleanMenu = !this.booleanMenu;

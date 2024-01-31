@@ -1,0 +1,21 @@
+.pop-up-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 161, 104, 0.289);
+}
+.pop-up-add .container-pop-up {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: rgba(70, 255, 70, 0.494);
+}
+.pop-up-add .container-pop-up .container-title {
+  display: flex;
+  align-items: center;
+}
+.pop-up-add .container-pop-up .container-title h1 {
+  margin: 0;
+}/*# sourceMappingURL=pop-up-adicionar.component.css.map */

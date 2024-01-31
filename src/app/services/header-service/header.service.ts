@@ -4,6 +4,6 @@ import { EventEmitter, Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class HeaderService {
-  static toggleMenu: EventEmitter<boolean> = new EventEmitter()
+  static toggleMenu: EventEmitter<boolean> = new EventEmitter();
   constructor() {}
 }
