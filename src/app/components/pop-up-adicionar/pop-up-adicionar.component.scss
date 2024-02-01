@@ -1,25 +1,85 @@
 @import "../../sass/functions";
 
-.pop-up-add {
-  @include flexCenter();
+// .pop-up-add {
+//   @include flexCenter();
+//   position: fixed;
+//   inset: 0;
+//   background-color: rgba(0, 161, 104, 0.289);
+.container-pop-up {
+  display: grid;
+  gap: 24px;
+  padding: 14px;
   position: fixed;
-  inset: 0;
-  background-color: rgba(0, 161, 104, 0.289);
-  .container-pop-up {
-    padding: 14px;
-    position: absolute;
-    max-width: 500px;
-    max-height: 500px;
-    background-color: rgba(70, 255, 70, 0.494);
-    .container-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // max-width: 500px;
+  // max-height: 500px;
+  border-radius: 10px;
+  background-color: rgba(70, 255, 70, 0.494);
+  .container-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    h1,
+    img {
+      background-color: rgba(23, 203, 23, 0.494);
+      border-radius: 5px;
+      padding: 5px;
     }
-    .container-text-area {
-      .text-area {
-        width: 100%;
+    h1 {
+      font-size: clamp(1em, 1em + 1vw, 1.5em);
+      // white-space: nowrap;
+      padding: 5px 10px;
+    }
+  }
+  .container-text-area {
+    display: grid;
+    gap: 12px;
+    .text-area {
+      font-size: clamp(1em, 1em + 1vw, 1.5em);
+      width: 100%;
+      border: 0;
+      padding: 5px;
+      border-radius: 5px;
+      transition: box-shadow 200ms;
+      &:focus {
+        box-shadow: 0px 0px 5px rgb(0, 107, 0);
+        outline: 0;
+      }
+    }
+    h2 {
+      text-align: center;
+    }
+    .input-tarefa {
+      font-size: clamp(1em, 1em + 1vw, 1.5em);
+      border: 0;
+      padding: 5px;
+      border-radius: 5px;
+      transition: box-shadow 200ms;
+      &:focus {
+        box-shadow: 0px 0px 5px rgb(0, 107, 0);
+        outline: 0;
+      }
+    }
+  }
+  .container-estado {
+    h2 {
+      text-align: center;
+    }
+  }
+  .container-add-btn {
+    display: flex;
+    justify-content: center;
+    button {
+      border: 0;
+      padding: 8px 15px;
+      border-radius: 5px;
+      &:active {
+        background-color: lightskyblue;
       }
     }
   }
 }
+// }

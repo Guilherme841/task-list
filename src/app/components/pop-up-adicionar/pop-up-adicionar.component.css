@@ -1,23 +1,72 @@
-.pop-up-add {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 161, 104, 0.289);
-}
-.pop-up-add .container-pop-up {
+.container-pop-up {
+  display: grid;
+  gap: 24px;
   padding: 14px;
-  position: absolute;
-  max-width: 500px;
-  max-height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
   background-color: rgba(70, 255, 70, 0.494);
 }
-.pop-up-add .container-pop-up .container-title {
+.container-pop-up .container-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 14px;
 }
-.pop-up-add .container-pop-up .container-text-area .text-area {
+.container-pop-up .container-title h1,
+.container-pop-up .container-title img {
+  background-color: rgba(23, 203, 23, 0.494);
+  border-radius: 5px;
+  padding: 5px;
+}
+.container-pop-up .container-title h1 {
+  font-size: clamp(1em, 1em + 1vw, 1.5em);
+  padding: 5px 10px;
+}
+.container-pop-up .container-text-area {
+  display: grid;
+  gap: 12px;
+}
+.container-pop-up .container-text-area .text-area {
+  font-size: clamp(1em, 1em + 1vw, 1.5em);
   width: 100%;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  transition: box-shadow 200ms;
+}
+.container-pop-up .container-text-area .text-area:focus {
+  box-shadow: 0px 0px 5px rgb(0, 107, 0);
+  outline: 0;
+}
+.container-pop-up .container-text-area h2 {
+  text-align: center;
+}
+.container-pop-up .container-text-area .input-tarefa {
+  font-size: clamp(1em, 1em + 1vw, 1.5em);
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  transition: box-shadow 200ms;
+}
+.container-pop-up .container-text-area .input-tarefa:focus {
+  box-shadow: 0px 0px 5px rgb(0, 107, 0);
+  outline: 0;
+}
+.container-pop-up .container-estado h2 {
+  text-align: center;
+}
+.container-pop-up .container-add-btn {
+  display: flex;
+  justify-content: center;
+}
+.container-pop-up .container-add-btn button {
+  border: 0;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.container-pop-up .container-add-btn button:active {
+  background-color: lightskyblue;
 }/*# sourceMappingURL=pop-up-adicionar.component.css.map */

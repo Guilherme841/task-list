@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './pop-up-adicionar.component.html',
-  styleUrl: './pop-up-adicionar.component.scss'
+  styleUrl: './pop-up-adicionar.component.scss',
 })
 export class PopUpAdicionarComponent {
-
+  booleanPopUp: boolean = true;
 }
