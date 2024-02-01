@@ -76,6 +76,7 @@
       border: 0;
       padding: 8px 15px;
       border-radius: 5px;
+      font-size: clamp(1em, 1em + 1vw, 1.5em);
       &:active {
         background-color: lightskyblue;
       }
