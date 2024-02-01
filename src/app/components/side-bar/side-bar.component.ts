@@ -17,4 +17,7 @@ export class SideBarComponent implements OnInit {
       this.booleanMenu = !this.booleanMenu;
     });
   }
+  callTogglePopUp() {
+    HeaderService.togglePopUp.emit()
+  }
 }
