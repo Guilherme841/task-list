@@ -15,21 +15,24 @@ import {
 } from '@angular/animations';
 import { HeaderService } from '../../services/header-service/header.service';
 
+const fadeInOut = [
+  trigger('fadeInOut', [
+    state(
+      'void',
+      style({
+        scale: 0,
+      })
+    ),
+    transition('void <=> *', animate('60ms')),
+  ]),
+];
+
+
 @Component({
   selector: 'app-pop-up-adicionar',
   standalone: true,
   imports: [],
-  animations: [
-    trigger('fadeInOut', [
-      state(
-        'void',
-        style({
-          scale: 0,
-        })
-      ),
-      transition('void <=> *', animate('100ms')),
-    ]),
-  ],
+  animations: [fadeInOut],
   templateUrl: './pop-up-adicionar.component.html',
   styleUrl: './pop-up-adicionar.component.scss',
 })
