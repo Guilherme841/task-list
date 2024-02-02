@@ -17,6 +17,7 @@ import { HeaderService } from '../../services/header-service/header.service';
 })
 export class PopUpAdicionarComponent implements OnInit {
   booleanPopUp: boolean = false;
+  btnAdd!: any;
   @ViewChild('popUp') popUp!: ElementRef;
   constructor(
     private _elementRef: ElementRef,
@@ -26,13 +27,14 @@ export class PopUpAdicionarComponent implements OnInit {
   @HostListener('document:click', ['$event'])
   clickForaDoPopUp(event: Event) {
     if (this.popUp && !this.popUp.nativeElement.contains(event.target)) {
-      if (this.booleanPopUp) {
+      if (this.popUp && !this.btnAdd.nativeElement.contains(event.target)) {
         this.booleanPopUp = false;
       }
     }
   }
   ngOnInit(): void {
-    HeaderService.togglePopUp.subscribe(() => {
+    HeaderService.togglePopUp.subscribe((btnAdd) => {
+      this.btnAdd = btnAdd;
       this.booleanPopUp = !this.booleanPopUp;
     });
   }

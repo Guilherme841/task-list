@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HeaderService } from '../../services/header-service/header.service';
 
 @Component({
@@ -12,12 +12,13 @@ import { HeaderService } from '../../services/header-service/header.service';
 export class SideBarComponent implements OnInit {
   booleanMenu: boolean = false;
   constructor(private _headerService: HeaderService) {}
+  @ViewChild('btnAdd') btnAdd!: ElementRef;
   ngOnInit(): void {
     HeaderService.toggleMenu.subscribe(() => {
       this.booleanMenu = !this.booleanMenu;
     });
   }
   callTogglePopUp() {
-    HeaderService.togglePopUp.emit()
+    HeaderService.togglePopUp.emit(this.btnAdd);
   }
 }
