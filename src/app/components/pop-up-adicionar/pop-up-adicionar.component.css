@@ -10,7 +10,7 @@
   max-height: -moz-fit-content;
   max-height: fit-content;
   border-radius: 10px;
-  background-color: rgba(70, 255, 70, 0.494);
+  background-color: rgb(0, 85, 98);
 }
 .container-pop-up .container-title {
   display: flex;
@@ -20,11 +20,16 @@
 }
 .container-pop-up .container-title h1,
 .container-pop-up .container-title img {
-  background-color: rgba(23, 203, 23, 0.494);
+  background-color: rgb(0, 98, 113);
   border-radius: 5px;
   padding: 5px;
 }
+.container-pop-up .container-title img {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
 .container-pop-up .container-title h1 {
+  color: lightgray;
   font-size: clamp(1em, 1em + 1vw, 1.5em);
   padding: 5px 10px;
 }
@@ -41,7 +46,7 @@
   transition: box-shadow 200ms;
 }
 .container-pop-up .container-text-area .text-area:focus {
-  box-shadow: 0px 0px 5px rgb(0, 107, 0);
+  box-shadow: 0px 0px 2px 3px rgb(0, 93, 151);
   outline: 0;
 }
 .container-pop-up .container-text-area h2 {
@@ -55,7 +60,7 @@
   transition: box-shadow 200ms;
 }
 .container-pop-up .container-text-area .input-tarefa:focus {
-  box-shadow: 0px 0px 5px rgb(0, 107, 0);
+  box-shadow: 0px 0px 2px 3px rgb(0, 93, 151);
   outline: 0;
 }
 .container-pop-up .container-estado h2 {
@@ -66,11 +71,16 @@
   justify-content: center;
 }
 .container-pop-up .container-add-btn button {
+  background-color: rgb(0, 98, 113);
   border: 0;
   padding: 8px 15px;
   border-radius: 5px;
   font-size: clamp(1em, 1em + 1vw, 1.5em);
+  color: lightgray;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .container-pop-up .container-add-btn button:active {
-  background-color: lightskyblue;
+  transition: background-color 200ms;
+  background-color: rgb(0, 94, 152);
 }/*# sourceMappingURL=pop-up-adicionar.component.css.map */

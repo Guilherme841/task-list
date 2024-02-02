@@ -1,4 +1,5 @@
 @import "../../sass/functions";
+@import "../../sass/variables";
 
 .container-pop-up {
   display: grid;
@@ -10,7 +11,7 @@
   width: fit-content;
   max-height: fit-content;
   border-radius: 10px;
-  background-color: rgba(70, 255, 70, 0.494);
+  background-color: rgb(0, 85, 98);
   .container-title {
     display: flex;
     align-items: center;
@@ -18,13 +19,17 @@
     gap: 14px;
     h1,
     img {
-      background-color: rgba(23, 203, 23, 0.494);
+      background-color: rgb(0, 98, 113);
       border-radius: 5px;
       padding: 5px;
     }
+    img {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
     h1 {
+      color: lightgray;
       font-size: clamp(1em, 1em + 1vw, 1.5em);
-      // white-space: nowrap;
       padding: 5px 10px;
     }
   }
@@ -39,7 +44,7 @@
       border-radius: 5px;
       transition: box-shadow 200ms;
       &:focus {
-        box-shadow: 0px 0px 5px rgb(0, 107, 0);
+        box-shadow: 0px 0px 2px 3px rgb(0, 93, 151);
         outline: 0;
       }
     }
@@ -53,7 +58,7 @@
       border-radius: 5px;
       transition: box-shadow 200ms;
       &:focus {
-        box-shadow: 0px 0px 5px rgb(0, 107, 0);
+        box-shadow: 0px 0px 2px 3px rgb(0, 93, 151);
         outline: 0;
       }
     }
@@ -67,14 +72,18 @@
     display: flex;
     justify-content: center;
     button {
+      background-color: rgb(0, 98, 113);
       border: 0;
       padding: 8px 15px;
       border-radius: 5px;
       font-size: clamp(1em, 1em + 1vw, 1.5em);
+      color: lightgray;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
       &:active {
-        background-color: lightskyblue;
+        transition: background-color 200ms;
+        background-color: rgb(0, 94, 152);
       }
     }
   }
 }
-// }
