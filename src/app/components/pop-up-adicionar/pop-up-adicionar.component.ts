@@ -23,10 +23,9 @@ const fadeInOut = [
         scale: 0,
       })
     ),
-    transition('void <=> *', animate('60ms')),
+    transition('void <=> *', animate('120ms ease-in-out')),
   ]),
 ];
-
 
 @Component({
   selector: 'app-pop-up-adicionar',

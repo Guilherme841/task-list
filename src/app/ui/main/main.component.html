@@ -1,11 +1,7 @@
 <main>
-  <!-- @defer { -->
   <app-side-bar></app-side-bar>
-  <!-- } -->
-  <section class="container-taks">
-    <button>Adicionar</button>
-  </section>
-  <!-- @defer { -->
   <app-pop-up-adicionar></app-pop-up-adicionar>
-  <!-- } -->
+  <section class="container-taks">
+    <button class="btn" (click)="callTogglePopUp()" #btnAdd>Adicionar</button>
+  </section>
 </main>
