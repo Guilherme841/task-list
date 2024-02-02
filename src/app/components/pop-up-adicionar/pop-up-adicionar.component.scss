@@ -1,20 +1,14 @@
 @import "../../sass/functions";
 
-// .pop-up-add {
-//   @include flexCenter();
-//   position: fixed;
-//   inset: 0;
-//   background-color: rgba(0, 161, 104, 0.289);
 .container-pop-up {
   display: grid;
   gap: 24px;
   padding: 14px;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  // max-width: 500px;
-  // max-height: 500px;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  max-height: fit-content;
   border-radius: 10px;
   background-color: rgba(70, 255, 70, 0.494);
   .container-title {

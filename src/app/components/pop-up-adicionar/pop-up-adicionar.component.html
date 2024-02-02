@@ -1,6 +1,5 @@
-<!-- <section class="pop-up-add" (click)="booleanPopUp = !booleanPopUp"> -->
 @if (booleanPopUp) {
-<div class="container-pop-up" #popUp>
+<div class="container-pop-up" #popUp [@fadeInOut]>
   <div class="container-title">
     <h1>Adicione sua Tarefa!</h1>
     <img
@@ -30,4 +29,4 @@
   </div>
 </div>
 }
-<!-- </section> -->
+<div style="width: 200px; height: 200px; background-color: violet;" [@fadeInOut]>Seu conteúdo aqui</div>

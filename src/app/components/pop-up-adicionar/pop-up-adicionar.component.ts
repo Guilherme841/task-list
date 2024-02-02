@@ -6,19 +6,37 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 import { HeaderService } from '../../services/header-service/header.service';
 
 @Component({
   selector: 'app-pop-up-adicionar',
   standalone: true,
   imports: [],
+  animations: [
+    trigger('fadeInOut', [
+      state(
+        'void',
+        style({
+          scale: 0,
+        })
+      ),
+      transition('void <=> *', animate('100ms')),
+    ]),
+  ],
   templateUrl: './pop-up-adicionar.component.html',
   styleUrl: './pop-up-adicionar.component.scss',
 })
 export class PopUpAdicionarComponent implements OnInit {
   booleanPopUp: boolean = false;
   btnAdd!: any;
-  @ViewChild('popUp') popUp!: ElementRef;
+  @ViewChild('popUp', { static: false }) popUp!: ElementRef;
   constructor(
     private _elementRef: ElementRef,
     private _renderer: Renderer2,
