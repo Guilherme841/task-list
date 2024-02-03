@@ -1,7 +1,37 @@
 <main>
   <app-side-bar></app-side-bar>
   <app-pop-up-adicionar></app-pop-up-adicionar>
-  <section class="container-taks">
+  <section class="container-btn-add-main">
     <button class="btn" (click)="callTogglePopUp()" #btnAdd>Adicionar</button>
+  </section>
+  <section class="container-task">
+    <div class="box-task">
+      <div class="box-title-task">
+        <h1>Task Here!</h1>
+        <div class="box-arrow">
+          <div class="box-pending">
+            <div class="pending"></div>
+          </div>
+          <div class="box-down-arrow">
+            <img
+              src="../../../assets/icons/arrow.png"
+              alt="down arrow"
+              class="down-arrow"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="box-details-task">
+        <div>
+          <p>
+            Nada nada nada nada nada nada nada nada nada nada nada nada nada
+            nada nada
+          </p>
+        </div>
+        <div>
+          <div>Pendência</div>
+        </div>
+      </div>
+    </div>
   </section>
 </main>

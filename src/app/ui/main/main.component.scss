@@ -1,3 +1,35 @@
 main {
   min-height: 100vh;
+  // padding: 18px;
+  .container-task {
+    .box-task {
+      .box-title-task {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: lightskyblue;
+        .box-arrow {
+          display: flex;
+          align-items: center;
+          .box-pending {
+            .pending {
+              width: 15px;
+              height: 15px;
+              background-color: limegreen;
+              border-radius: 50%;
+            }
+          }
+        }
+        .box-down-arrow {
+          .down-arrow {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+      .box-details-task {
+        background-color: rgba(0, 136, 255, 0.334);
+      }
+    }
+  }
 }
