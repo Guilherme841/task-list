@@ -6,10 +6,12 @@ main .container-task .box-task .box-title-task {
   align-items: center;
   justify-content: space-between;
   background-color: lightskyblue;
+  padding: 12px;
 }
 main .container-task .box-task .box-title-task .box-arrow {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 main .container-task .box-task .box-title-task .box-arrow .box-pending .pending {
   width: 15px;
@@ -17,10 +19,34 @@ main .container-task .box-task .box-title-task .box-arrow .box-pending .pending 
   background-color: limegreen;
   border-radius: 50%;
 }
+main .container-task .box-task .box-title-task .box-down-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 main .container-task .box-task .box-title-task .box-down-arrow .down-arrow {
   width: 15px;
   height: 15px;
+  transform: rotate(90deg);
 }
 main .container-task .box-task .box-details-task {
+  display: grid;
+  justify-items: flex-end;
+  gap: 10px;
+  padding: 12px;
   background-color: rgba(0, 136, 255, 0.334);
+}
+main .container-task .box-task .box-details-task .box-edit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+main .container-task .box-task .box-details-task .box-edit button {
+  border: 0;
+}
+main .container-task .box-task .box-details-task .box-desc-pending .desc-pending {
+  background-color: limegreen;
+  border-radius: 5px;
+  padding: 5px 10px;
 }/*# sourceMappingURL=main.component.css.map */

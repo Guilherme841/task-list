@@ -7,7 +7,7 @@
   <section class="container-task">
     <div class="box-task">
       <div class="box-title-task">
-        <h1>Task Here!</h1>
+        <h1>{{ taskName }}</h1>
         <div class="box-arrow">
           <div class="box-pending">
             <div class="pending"></div>
@@ -22,14 +22,23 @@
         </div>
       </div>
       <div class="box-details-task">
-        <div>
-          <p>
+        <div class="box-edit">
+          <button>
+            <img src="../../../assets/icons/trash.png" alt="task delete" />
+          </button>
+          <button>
+            <img src="../../../assets/icons/pen.png" alt="task edit" />
+          </button>
+          <button>Concluído</button>
+        </div>
+        <div class="box-desc-task">
+          <p class="desc-task">
             Nada nada nada nada nada nada nada nada nada nada nada nada nada
             nada nada
           </p>
         </div>
-        <div>
-          <div>Pendência</div>
+        <div class="box-desc-pending">
+          <div class="desc-pending">Pendência</div>
         </div>
       </div>
     </div>

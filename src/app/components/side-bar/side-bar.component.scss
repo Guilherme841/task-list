@@ -2,6 +2,7 @@
 
 @media screen and (max-width: 900px) {
   .side-bar {
+    border-top: 5px solid rgba(0, 86, 100, 0.551);
     background-color: $bg-color-dark-blue;
     width: fit-content;
     padding: 24px 15px;
@@ -53,6 +54,7 @@
 }
 @media screen and (min-width: 900px) {
   .side-bar {
+    border-top: 5px solid rgba(0, 86, 100, 0.551);
     background-color: $bg-color-dark-blue;
     width: fit-content;
     min-height: 100vh;

@@ -1,6 +1,5 @@
 main {
   min-height: 100vh;
-  // padding: 18px;
   .container-task {
     .box-task {
       .box-title-task {
@@ -8,9 +7,11 @@ main {
         align-items: center;
         justify-content: space-between;
         background-color: lightskyblue;
+        padding: 12px;
         .box-arrow {
           display: flex;
           align-items: center;
+          gap: 10px;
           .box-pending {
             .pending {
               width: 15px;
@@ -21,14 +22,38 @@ main {
           }
         }
         .box-down-arrow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           .down-arrow {
             width: 15px;
             height: 15px;
+            transform: rotate(90deg);
           }
         }
       }
       .box-details-task {
+        display: grid;
+        justify-items: flex-end;
+        gap: 10px;
+        padding: 12px;
         background-color: rgba(0, 136, 255, 0.334);
+        .box-edit {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+          button {
+            border: 0;
+          }
+        }
+        .box-desc-pending {
+          .desc-pending {
+            background-color: limegreen;
+            border-radius: 5px;
+            padding: 5px 10px;
+          }
+        }
       }
     }
   }

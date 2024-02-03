@@ -12,6 +12,7 @@ import { HeaderService } from '../../services/header-service/header.service';
   styleUrl: './main.component.scss',
 })
 export class MainComponent implements OnInit {
+  taskName: string = 'Aqui vai o Nome da Tarefa!';
   @ViewChild('btnAdd', { static: false }) btnAdd!: ElementRef;
   constructor(private _headerService: HeaderService) {}
   callTogglePopUp() {
