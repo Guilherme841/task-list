@@ -18,7 +18,5 @@ export class MainComponent implements OnInit {
   callTogglePopUp() {
     HeaderService.togglePopUp.emit(this.btnAdd);
   }
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 }
