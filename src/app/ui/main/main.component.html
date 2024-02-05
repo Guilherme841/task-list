@@ -1,50 +1,10 @@
 <main>
   <app-side-bar></app-side-bar>
-  <app-pop-up-adicionar></app-pop-up-adicionar>
+  <app-pop-up-adicionar [newTask]="newTask"></app-pop-up-adicionar>
   <section class="container-btn-add-main">
     <button class="btn" (click)="callTogglePopUp()" #btnAdd>Adicionar</button>
   </section>
-  <app-container-task></app-container-task>
-  <!-- break -->
-  <!-- <section class="container-task">
-    <div class="box-task">
-      <div class="box-title-task">
-        <h1>Título da Tarefa!</h1>
-        <div class="box-arrow">
-          <div class="box-pending">
-            <div class="pending"></div>
-          </div>
-          <div class="box-down-arrow">
-            <img
-              src="../../../assets/icons/arrow.png"
-              alt="down arrow"
-              class="down-arrow"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="box-details-task">
-        <div class="box-edit">
-          <button>
-            <img src="../../../assets/icons/trash.png" alt="task delete" />
-          </button>
-          <button>
-            <img src="../../../assets/icons/pen.png" alt="task edit" />
-          </button>
-          <button>
-            <img src="../../../assets/icons/correct.png" alt="task done" />
-          </button>
-        </div>
-        <div class="box-desc-task">
-          <p class="desc-task">
-            Lorem ipsum dolor sit amet, s quae at corporis nesciunt.
-            Tenetur, similique.
-          </p>
-        </div>
-        <div class="box-desc-pending">
-          <button>Pendência</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
+  <section style="display: grid; gap: 15px; padding: 15px;">
+    <app-container-task *ngFor="let item of newTask"></app-container-task>
+  </section>
 </main>

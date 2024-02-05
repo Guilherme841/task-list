@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './container-task.component.html',
-  styleUrl: './container-task.component.scss'
+  styleUrl: './container-task.component.scss',
 })
 export class ContainerTaskComponent {
 
