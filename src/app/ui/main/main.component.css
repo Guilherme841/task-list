@@ -1,4 +1,73 @@
 main {
   min-height: 100vh;
-  background-image: radial-gradient(circle at center, #002A40 0%, #003450 100%);
+}
+main .container-task {
+  color: lightgray;
+}
+main .container-task .box-task .box-title-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 70, 81);
+  border-bottom: 3px solid rgba(0, 47, 54, 0.723);
+  padding: 12px;
+}
+main .container-task .box-task .box-title-task .box-arrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .container-task .box-task .box-title-task .box-arrow .box-pending .pending {
+  width: 15px;
+  height: 15px;
+  background-color: limegreen;
+  border-radius: 50%;
+}
+main .container-task .box-task .box-title-task .box-down-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container-task .box-task .box-title-task .box-down-arrow .down-arrow {
+  width: 15px;
+  height: 15px;
+  transform: rotate(90deg);
+}
+main .container-task .box-task .box-details-task {
+  display: grid;
+  justify-items: flex-end;
+  background-color: rgb(0, 70, 81);
+}
+main .container-task .box-task .box-details-task .box-edit {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 3px solid rgba(0, 47, 54, 0.723);
+  gap: 8px;
+  width: 100%;
+}
+main .container-task .box-task .box-details-task .box-edit button {
+  background-color: rgb(0, 41, 47);
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  color: lightgray;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+main .container-task .box-task .box-details-task .box-edit button img {
+  width: 20px;
+  height: 20px;
+}
+main .container-task .box-task .box-details-task .box-desc-pending {
+  padding: 12px;
+}
+main .container-task .box-task .box-details-task .box-desc-pending .desc-pending {
+  background-color: limegreen;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+main .container-task .box-task .box-details-task .box-desc-task .desc-task {
+  text-align: left;
+  padding: 12px;
 }/*# sourceMappingURL=main.component.css.map */
