@@ -14,7 +14,6 @@ import {
   animate,
 } from '@angular/animations';
 import { HeaderService } from '../../services/header-service/header.service';
-import { FormsModule } from '@angular/forms';
 
 const fadeInOut = [
   trigger('fadeInOut', [
@@ -31,7 +30,7 @@ const fadeInOut = [
 @Component({
   selector: 'app-pop-up-adicionar',
   standalone: true,
-  imports: [FormsModule],
+  imports: [],
   animations: [fadeInOut],
   templateUrl: './pop-up-adicionar.component.html',
   styleUrl: './pop-up-adicionar.component.scss',

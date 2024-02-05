@@ -1,11 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HeaderService } from '../../services/header-service/header.service';
-import { BoxTaskComponent } from '../box-task/box-task.component';
 
 @Component({
   selector: 'app-container-task',
   standalone: true,
-  imports: [BoxTaskComponent],
+  imports: [],
   providers: [HeaderService],
   templateUrl: './container-task.component.html',
   styleUrl: './container-task.component.scss',
