@@ -16,6 +16,7 @@ import {
 } from '@angular/animations';
 import { HeaderService } from '../../services/header-service/header.service';
 import { ContainerTaskComponent } from '../container-task/container-task.component';
+import { FormsModule } from '@angular/forms';
 
 const fadeInOut = [
   trigger('fadeInOut', [
@@ -32,7 +33,7 @@ const fadeInOut = [
 @Component({
   selector: 'app-pop-up-adicionar',
   standalone: true,
-  imports: [ContainerTaskComponent],
+  imports: [ContainerTaskComponent, FormsModule],
   animations: [fadeInOut],
   templateUrl: './pop-up-adicionar.component.html',
   styleUrl: './pop-up-adicionar.component.scss',
@@ -60,8 +61,5 @@ export class PopUpAdicionarComponent implements OnInit {
       this.btnAdd = btnAdd;
       this.booleanPopUp = !this.booleanPopUp;
     });
-  }
-  addTask() {
-    this.newTask.push(new ContainerTaskComponent());
   }
 }

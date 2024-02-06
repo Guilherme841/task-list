@@ -1,10 +1,10 @@
 <main>
   <app-side-bar></app-side-bar>
-  <app-pop-up-adicionar [newTask]="newTask"></app-pop-up-adicionar>
+  <app-pop-up-adicionar></app-pop-up-adicionar>
   <section class="container-btn-add-main">
     <button class="btn" (click)="callTogglePopUp()" #btnAdd>Adicionar</button>
   </section>
-  <section style="display: grid; gap: 15px; padding: 15px;">
-    <app-container-task *ngFor="let item of newTask"></app-container-task>
+  <section style="display: grid; gap: 15px; padding: 15px">
+    <app-container-task></app-container-task>
   </section>
 </main>

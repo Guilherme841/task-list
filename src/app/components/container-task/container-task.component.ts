@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-container-task',
   standalone: true,
   imports: [],
+  providers: [],
   templateUrl: './container-task.component.html',
   styleUrl: './container-task.component.scss',
 })
