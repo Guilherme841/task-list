@@ -17,6 +17,7 @@ import {
 import { HeaderService } from '../../services/header-service/header.service';
 import { ContainerTaskComponent } from '../container-task/container-task.component';
 import { FormsModule } from '@angular/forms';
+import { TaskService } from '../../services/task.service';
 
 const fadeInOut = [
   trigger('fadeInOut', [
@@ -35,18 +36,22 @@ const fadeInOut = [
   standalone: true,
   imports: [ContainerTaskComponent, FormsModule],
   animations: [fadeInOut],
+  providers: [HeaderService, TaskService],
   templateUrl: './pop-up-adicionar.component.html',
   styleUrl: './pop-up-adicionar.component.scss',
 })
 export class PopUpAdicionarComponent implements OnInit {
   booleanPopUp: boolean = false;
   btnAdd!: any;
+  nameTask: string = '';
+  descTask: string = '';
   @Input() newTask: ContainerTaskComponent[] = [];
   @ViewChild('popUp', { static: false }) popUp!: ElementRef;
   constructor(
     private _elementRef: ElementRef,
     private _renderer: Renderer2,
-    private _headerService: HeaderService
+    private _headerService: HeaderService,
+    private _taskService: TaskService
   ) {}
   @HostListener('document:click', ['$event'])
   clickForaDoPopUp(event: Event) {
@@ -61,5 +66,8 @@ export class PopUpAdicionarComponent implements OnInit {
       this.btnAdd = btnAdd;
       this.booleanPopUp = !this.booleanPopUp;
     });
+  }
+  addTask() {
+    TaskService.addTask.emit({ name: this.nameTask, desc: this.descTask });
   }
 }
