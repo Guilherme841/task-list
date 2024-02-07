@@ -1,4 +1,10 @@
 main {
   min-height: 100vh;
-  background-color: rgba(0, 27, 32, 0.900);
+  background-color: rgba(0, 27, 32, 0.9);
+  .container-app-task {
+    padding: 15px;
+  }
+  @media screen and (min-width:900px) {
+    display: flex;
+  }
 }

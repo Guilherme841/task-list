@@ -1,5 +1,13 @@
 <section style="display: grid; gap: 25px">
-  <section class="container-task" *ngFor="let task of arrTask; let i = index">
+  <button
+    class="btn"
+    (click)="callTogglePopUp()"
+    #btnAdd
+    [ngClass]="{'btn-off': arrTask.length > 1}"
+  >
+    Adicionar
+  </button>
+  <section class="container-task" *ngFor="let task of arrTask; let i = index" #containerTask>
     @if (i > 0) {
     <div class="box-task">
       <div class="box-title-task">
@@ -20,7 +28,7 @@
       <div class="box-details-task">
         <div class="box-edit">
           <button>
-            <img src="../../../assets/icons/trash.png" alt="task delete" />
+            <img src="../../../assets/icons/trash.png" alt="task delete" (click)="deleteTask($event)"/>
           </button>
           <button>
             <img src="../../../assets/icons/pen.png" alt="task edit" />
@@ -33,7 +41,7 @@
           <p class="desc-task">{{ task.desc }}</p>
         </div>
         <div class="box-desc-pending">
-          <button>Pendência</button>
+          <div class="status-task">Pendência</div>
         </div>
       </div>
     </div>
