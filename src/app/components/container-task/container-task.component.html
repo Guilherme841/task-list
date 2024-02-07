@@ -1,7 +1,8 @@
-<section class="container-task">
+<!-- @for (task of arrTask; track $index | keyvalue) { -->
+<section class="container-task" *ngFor="let task of arrTask">
   <div class="box-task">
     <div class="box-title-task">
-      <h1>Aqui vai a tarefa!</h1>
+      <h1>{{ task.name }}</h1>
       <div class="box-arrow">
         <div class="box-pending">
           <div class="pending"></div>
@@ -28,7 +29,7 @@
         </button>
       </div>
       <div class="box-desc-task">
-        <p class="desc-task">Aqui vai a descrição da tarefa!</p>
+        <p class="desc-task">{{ task.desc }}</p>
       </div>
       <div class="box-desc-pending">
         <button>Pendência</button>
@@ -36,3 +37,5 @@
     </div>
   </div>
 </section>
+<!-- } -->
+<div class="container"></div>
