@@ -1,41 +1,42 @@
-<!-- @for (task of arrTask; track $index | keyvalue) { -->
-<section class="container-task" *ngFor="let task of arrTask">
-  <div class="box-task">
-    <div class="box-title-task">
-      <h1>{{ task.name }}</h1>
-      <div class="box-arrow">
-        <div class="box-pending">
-          <div class="pending"></div>
+<section style="display: grid; gap: 25px">
+  <section class="container-task" *ngFor="let task of arrTask; let i = index">
+    @if (i > 0) {
+    <div class="box-task">
+      <div class="box-title-task">
+        <h1>{{ task.name }}</h1>
+        <div class="box-arrow">
+          <div class="box-pending">
+            <div class="pending"></div>
+          </div>
+          <div class="box-down-arrow">
+            <img
+              src="../../../assets/icons/arrow.png"
+              alt="down arrow"
+              class="down-arrow"
+            />
+          </div>
         </div>
-        <div class="box-down-arrow">
-          <img
-            src="../../../assets/icons/arrow.png"
-            alt="down arrow"
-            class="down-arrow"
-          />
+      </div>
+      <div class="box-details-task">
+        <div class="box-edit">
+          <button>
+            <img src="../../../assets/icons/trash.png" alt="task delete" />
+          </button>
+          <button>
+            <img src="../../../assets/icons/pen.png" alt="task edit" />
+          </button>
+          <button>
+            <img src="../../../assets/icons/correct.png" alt="task done" />
+          </button>
+        </div>
+        <div class="box-desc-task">
+          <p class="desc-task">{{ task.desc }}</p>
+        </div>
+        <div class="box-desc-pending">
+          <button>Pendência</button>
         </div>
       </div>
     </div>
-    <div class="box-details-task">
-      <div class="box-edit">
-        <button>
-          <img src="../../../assets/icons/trash.png" alt="task delete" />
-        </button>
-        <button>
-          <img src="../../../assets/icons/pen.png" alt="task edit" />
-        </button>
-        <button>
-          <img src="../../../assets/icons/correct.png" alt="task done" />
-        </button>
-      </div>
-      <div class="box-desc-task">
-        <p class="desc-task">{{ task.desc }}</p>
-      </div>
-      <div class="box-desc-pending">
-        <button>Pendência</button>
-      </div>
-    </div>
-  </div>
+    }
+  </section>
 </section>
-<!-- } -->
-<div class="container"></div>

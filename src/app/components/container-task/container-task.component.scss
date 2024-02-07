@@ -2,6 +2,7 @@
   color: lightgray;
   .box-task {
     .box-title-task {
+      border-radius: 15px 15px 0px 0px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -37,6 +38,7 @@
       }
     }
     .box-details-task {
+      border-radius: 0px 0px 15px 15px;
       display: grid;
       background-color: rgb(0, 70, 81);
       .box-edit {
