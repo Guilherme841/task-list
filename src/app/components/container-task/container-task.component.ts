@@ -45,4 +45,8 @@ export class ContainerTaskComponent implements OnInit {
   deleteTask(event: any) {
     event.target.closest('.container-task').remove();
   }
+  boolEditTask: boolean = false;
+  editTask() {
+    this.boolEditTask = !this.boolEditTask;
+  }
 }

@@ -3,15 +3,19 @@
     class="btn"
     (click)="callTogglePopUp()"
     #btnAdd
-    [ngClass]="{'btn-off': arrTask.length > 1}"
+    [ngClass]="{ 'btn-off': arrTask.length > 1 }"
   >
     Adicionar
   </button>
-  <section class="container-task" *ngFor="let task of arrTask; let i = index" #containerTask>
+  <section
+    class="container-task"
+    *ngFor="let task of arrTask; let i = index"
+    #containerTask
+  >
     @if (i > 0) {
     <div class="box-task">
       <div class="box-title-task">
-        <h1>{{ task.name }}</h1>
+        <h1 [attr.contenteditable]="boolEditTask">{{ task.name }}</h1>
         <div class="box-arrow">
           <div class="box-pending">
             <div class="pending"></div>
@@ -28,10 +32,18 @@
       <div class="box-details-task">
         <div class="box-edit">
           <button>
-            <img src="../../../assets/icons/trash.png" alt="task delete" (click)="deleteTask($event)"/>
+            <img
+              src="../../../assets/icons/trash.png"
+              alt="task delete"
+              (click)="deleteTask($event)"
+            />
           </button>
           <button>
-            <img src="../../../assets/icons/pen.png" alt="task edit" />
+            <img
+              src="../../../assets/icons/pen.png"
+              alt="task edit"
+              (click)="editTask()"
+            />
           </button>
           <button>
             <img src="../../../assets/icons/correct.png" alt="task done" />

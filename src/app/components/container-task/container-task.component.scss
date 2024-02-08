@@ -14,23 +14,35 @@
 .btn-off {
   display: none;
 }
+.btn-on {
+  display: block;
+}
 .container-task {
   color: lightgray;
   .box-task {
     .box-title-task {
+      h1 {
+        word-break: break-all;
+        transition: padding 120ms;
+      }
+      h1[contenteditable="true"] {
+        border: 0;
+        outline: 0;
+        border-bottom: 1px solid white;
+        padding: 5px;
+        display: inline-block;
+      }
       border-radius: 15px 15px 0px 0px;
       display: flex;
       align-items: center;
-      gap: 10px;
       justify-content: space-between;
+      gap: 10px;
       background-color: rgb(0, 70, 81);
       border-bottom: 3px solid rgba(0, 47, 54, 0.723);
       padding: 12px;
-      flex-wrap: wrap;
       .box-arrow {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         gap: 10px;
         .box-pending {
           .pending {
