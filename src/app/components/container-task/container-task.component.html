@@ -9,10 +9,13 @@
   </button>
   <section
     class="container-task"
-    *ngFor="let task of arrTask | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; let i = index"
+    *ngFor="
+      let task of arrTask
+        | paginate : { itemsPerPage: itemsPerPage, currentPage: p };
+      let i = index
+    "
     #containerTask
   >
-    <!-- @if (i > 0) { -->
     <div class="box-task">
       <div class="box-title-task">
         <h1 [attr.contenteditable]="boolEditTask">{{ task.name }}</h1>
@@ -24,7 +27,7 @@
       </div>
       <div class="box-details-task">
         <div class="box-edit">
-          <button (click)="deleteTask($event)">
+          <button (click)="deleteTask($event, task.name, task.desc)">
             <img src="../../../assets/icons/trash.png" alt="task delete" />
           </button>
           <button (click)="editTask()">
@@ -46,7 +49,6 @@
         </div>
       </div>
     </div>
-    <!-- } -->
   </section>
 </section>
 <pagination-controls (pageChange)="p = $event"></pagination-controls>

@@ -48,7 +48,14 @@ export class ContainerTaskComponent implements OnInit {
   callTogglePopUp() {
     HeaderService.togglePopUp.emit(this.btnAdd);
   }
-  deleteTask(event: any) {
+  deleteTask(event: any, name: any, desc: any) {
+    const findObjDel = this.arrTask.find(
+      (arrTask) => arrTask.name === name && arrTask.desc === desc
+    );
+    const findObjDelTask = findObjDel as Task;
+    const iFindObjDel = this.arrTask.indexOf(findObjDelTask);
+    this.arrTask.splice(iFindObjDel, 1);
+    console.log(this.arrTask);
     event.target.closest('.container-task').remove();
   }
   boolEditTask: boolean = false;
