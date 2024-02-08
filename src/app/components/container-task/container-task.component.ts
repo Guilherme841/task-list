@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TaskService } from '../../services/task.service';
 import { CommonModule } from '@angular/common';
 import { HeaderService } from '../../services/header-service/header.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 interface Task {
   name: string;
@@ -11,7 +12,7 @@ interface Task {
 @Component({
   selector: 'app-container-task',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgxPaginationModule],
   providers: [TaskService, HeaderService],
   templateUrl: './container-task.component.html',
   styleUrl: './container-task.component.scss',
@@ -24,6 +25,10 @@ export class ContainerTaskComponent implements OnInit {
     private _headerService: HeaderService,
     private _elementRef: ElementRef
   ) {}
+
+  p: number = 1;
+  itemsPerPage: number = 3;
+
   nameTask: string = '';
   descTask: string = '';
   arrTask: Task[] = [
@@ -33,6 +38,7 @@ export class ContainerTaskComponent implements OnInit {
     },
   ];
   ngOnInit(): void {
+    this.arrTask.shift();
     TaskService.addTask.subscribe((task: any) => {
       this.arrTask.push(task);
       this.nameTask = task.name;
@@ -48,5 +54,9 @@ export class ContainerTaskComponent implements OnInit {
   boolEditTask: boolean = false;
   editTask() {
     this.boolEditTask = !this.boolEditTask;
+  }
+  boolDone: boolean = false;
+  doneTask() {
+    this.boolDone = !this.boolDone;
   }
 }

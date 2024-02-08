@@ -9,54 +9,44 @@
   </button>
   <section
     class="container-task"
-    *ngFor="let task of arrTask; let i = index"
+    *ngFor="let task of arrTask | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; let i = index"
     #containerTask
   >
-    @if (i > 0) {
+    <!-- @if (i > 0) { -->
     <div class="box-task">
       <div class="box-title-task">
         <h1 [attr.contenteditable]="boolEditTask">{{ task.name }}</h1>
         <div class="box-arrow">
           <div class="box-pending">
-            <div class="pending"></div>
-          </div>
-          <div class="box-down-arrow">
-            <img
-              src="../../../assets/icons/arrow.png"
-              alt="down arrow"
-              class="down-arrow"
-            />
+            <div class="pending" [ngClass]="{ done: boolDone }"></div>
           </div>
         </div>
       </div>
       <div class="box-details-task">
         <div class="box-edit">
-          <button>
-            <img
-              src="../../../assets/icons/trash.png"
-              alt="task delete"
-              (click)="deleteTask($event)"
-            />
+          <button (click)="deleteTask($event)">
+            <img src="../../../assets/icons/trash.png" alt="task delete" />
           </button>
-          <button>
-            <img
-              src="../../../assets/icons/pen.png"
-              alt="task edit"
-              (click)="editTask()"
-            />
+          <button (click)="editTask()">
+            <img src="../../../assets/icons/pen.png" alt="task edit" />
           </button>
-          <button>
+          <button (click)="doneTask()">
             <img src="../../../assets/icons/correct.png" alt="task done" />
           </button>
         </div>
         <div class="box-desc-task">
-          <p class="desc-task">{{ task.desc }}</p>
+          <p class="desc-task" [attr.contenteditable]="boolEditTask">
+            {{ task.desc }}
+          </p>
         </div>
         <div class="box-desc-pending">
-          <div class="status-task">Pendência</div>
+          <div class="status-task" [ngClass]="{ 'status-done': boolDone }">
+            Pendente
+          </div>
         </div>
       </div>
     </div>
-    }
+    <!-- } -->
   </section>
 </section>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

@@ -36,6 +36,7 @@
 .container-task .box-task .box-title-task h1 {
   word-break: break-all;
   transition: padding 120ms;
+  font-size: 1.5em;
 }
 .container-task .box-task .box-title-task h1[contenteditable=true] {
   border: 0;
@@ -54,6 +55,9 @@
   height: 15px;
   background-color: orange;
   border-radius: 50%;
+}
+.container-task .box-task .box-title-task .box-arrow .box-pending .done {
+  background-color: lime;
 }
 .container-task .box-task .box-title-task .box-down-arrow {
   display: flex;
@@ -101,17 +105,32 @@
   width: fit-content;
   border: 0;
   padding: 5px 10px;
-  color: lightgray;
-  font-size: 1em;
+  color: white;
+  font-size: 1.1em;
   background-color: orange;
   border-radius: 10px;
+}
+.container-task .box-task .box-details-task .box-desc-pending .status-done {
+  background-color: lime;
 }
 .container-task .box-task .box-details-task .box-desc-pending .desc-pending {
   background-color: limegreen;
   border-radius: 5px;
   padding: 5px 10px;
 }
+.container-task .box-task .box-details-task .box-desc-task {
+  padding: 12px;
+}
 .container-task .box-task .box-details-task .box-desc-task .desc-task {
   text-align: left;
-  padding: 12px;
+  word-break: break-all;
+  transition: padding 120ms;
+  font-size: 1.2em;
+}
+.container-task .box-task .box-details-task .box-desc-task .desc-task[contenteditable=true] {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid white;
+  padding: 5px;
+  display: inline-block;
 }/*# sourceMappingURL=container-task.component.css.map */
