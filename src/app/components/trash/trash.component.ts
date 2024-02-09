@@ -11,5 +11,7 @@ import { TaskService } from '../../services/task.service';
 export class TrashComponent implements OnInit {
   constructor(private _taskService: TaskService) {}
   ngOnInit() {
+    const getElement = localStorage.getItem('element');
+    console.log(getElement);
   }
 }
