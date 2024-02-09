@@ -9,7 +9,9 @@
   inset: 0;
   margin: auto;
   width: fit-content;
-  max-height: fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  height: -moz-fit-content;
   border-radius: 10px;
   background-color: rgb(0, 85, 98);
   .container-title {

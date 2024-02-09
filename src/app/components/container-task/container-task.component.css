@@ -101,8 +101,8 @@
   padding: 12px;
 }
 .container-task .box-task .box-details-task .box-desc-pending .status-task {
-  width: -moz-fit-content;
   width: fit-content;
+  width: -moz-fit-content;
   border: 0;
   padding: 5px 10px;
   color: white;
