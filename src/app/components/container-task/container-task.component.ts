@@ -55,7 +55,6 @@ export class ContainerTaskComponent implements OnInit {
     const findObjDelTask = findObjDel as Task;
     const iFindObjDel = this.arrTask.indexOf(findObjDelTask);
     this.arrTask.splice(iFindObjDel, 1);
-    console.log(this.arrTask);
     event.target.closest('.container-task').remove();
   }
   boolEditTask: boolean = false;

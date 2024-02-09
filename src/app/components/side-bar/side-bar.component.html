@@ -1,9 +1,9 @@
 <section class="side-bar" [class.open]="booleanMenu" [class.hide]="!booleanMenu">
   <div class="container-side-bar">
     <button class="btn" (click)="callTogglePopUp()" #btnAdd>Adicionar</button>
-    <button class="btn">Remover</button>
+    <!-- <button class="btn">Remover</button> -->
     <button class="btn">Feitas</button>
     <button class="btn">Pendentes</button>
-    <button class="btn">Lixeira</button>
+    <button class="btn" (click)="callTrash()">Lixeira</button>
   </div>
 </section>
