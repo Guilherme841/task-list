@@ -10,9 +10,5 @@ import { TaskService } from '../../services/task.service';
 })
 export class TrashComponent implements OnInit {
   constructor(private _taskService: TaskService) {}
-  ngOnInit() {
-    // TaskService.delTask.subscribe((element) => {
-      // console.log(element)
-    // });
-  }
+  ngOnInit() {}
 }

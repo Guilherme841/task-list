@@ -49,7 +49,6 @@ export class ContainerTaskComponent implements OnInit {
     HeaderService.togglePopUp.emit(this.btnAdd);
   }
   deleteTask(event: any, name: any, desc: any) {
-    // TaskService.delTask.emit(this.containerTask.nativeElement); 
     const findObjDel = this.arrTask.find(
       (arrTask) => arrTask.name === name && arrTask.desc === desc
     );
