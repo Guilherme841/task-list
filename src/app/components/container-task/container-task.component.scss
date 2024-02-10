@@ -1,6 +1,5 @@
 .btn {
   margin: auto;
-  width: 35%;
   overflow-x: hidden;
   border: 0;
   padding: 10px 25px;
@@ -16,6 +15,23 @@
 }
 .btn-on {
   display: block;
+}
+::ng-deep {
+  pagination-template {
+    nav {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 16px;
+      .ngx-pagination {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 .container-task {
   color: lightgray;

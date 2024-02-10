@@ -1,4 +1,5 @@
 .container-pop-up {
+  z-index: 1;
   display: grid;
   gap: 24px;
   padding: 14px;

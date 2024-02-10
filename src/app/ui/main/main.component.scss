@@ -2,8 +2,10 @@ main {
   min-height: 100vh;
   background-color: rgba(0, 27, 32, 0.9);
   .container-app-task {
+    width: 100%;
     padding: 15px;
     min-height: 100vh;
+    position: relative;
   }
   @media screen and (min-width:900px) {
     display: flex;

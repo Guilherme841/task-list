@@ -3,7 +3,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
 import { SideBarComponent } from '../../components/side-bar/side-bar.component';
 import { PopUpAdicionarComponent } from '../../components/pop-up-adicionar/pop-up-adicionar.component';
-// import { ContainerTaskComponent } from '../../components/container-task/container-task.component';
 import { RouterOutlet } from '@angular/router';
 import { PageBarComponent } from '../../components/page-bar/page-bar.component';
 import { CommonModule } from '@angular/common';
@@ -15,7 +14,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     SideBarComponent,
     PopUpAdicionarComponent,
-    // ContainerTaskComponent,
     RouterOutlet,
     PageBarComponent,
     NgxPaginationModule
@@ -28,7 +26,6 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {}
   dados = ['teste1', 'teste2', 'teste3', 'teste4'] // Seus dados aqui
 
-  // Opções de paginação
-  p: number = 1; // Página inicial
+  p: number = 1;
   itemsPerPage: number = 3;
 }
