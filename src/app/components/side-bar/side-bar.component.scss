@@ -2,6 +2,7 @@
 
 @media screen and (max-width: 900px) {
   .side-bar {
+    z-index: 2;
     border-top: 5px solid rgba(0, 86, 100, 0.551);
     background-color: $bg-color-dark-blue;
     width: fit-content;
