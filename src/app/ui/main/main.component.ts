@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 import { SideBarComponent } from '../../components/side-bar/side-bar.component';
@@ -22,8 +22,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
-export class MainComponent implements OnInit {
-  ngOnInit(): void {}
+export class MainComponent {
   dados = ['teste1', 'teste2', 'teste3', 'teste4'] // Seus dados aqui
 
   p: number = 1;

@@ -4,12 +4,14 @@
     <div
       class="container-icon-menu"
       (click)="toggleMenu()"
+      (keyup)="$event.key === 'enter'"
       [class.container-icon-menu-open]="showMenu"
       #menuIcon
+      tabindex="0"
     >
-      <span class="row-menu" [class.row1]="showMenu"></span>
-      <span class="row-menu" [class.row2]="showMenu"></span>
-      <span class="row-menu" [class.row3]="showMenu"></span>
+      <span class="row-menu" [class.row1]="showMenu" tabindex="0"></span>
+      <span class="row-menu" [class.row2]="showMenu" tabindex="0"></span>
+      <span class="row-menu" [class.row3]="showMenu" tabindex="0"></span>
     </div>
   </nav>
 </header>

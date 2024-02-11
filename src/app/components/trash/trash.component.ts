@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TaskService } from '../../services/task.service';
 
 @Component({
@@ -8,7 +8,6 @@ import { TaskService } from '../../services/task.service';
   templateUrl: './trash.component.html',
   styleUrl: './trash.component.scss',
 })
-export class TrashComponent implements OnInit {
+export class TrashComponent {
   constructor(private _taskService: TaskService) {}
-  ngOnInit() {}
 }

@@ -42,7 +42,7 @@ const fadeInOut = [
 })
 export class PopUpAdicionarComponent implements OnInit {
   booleanPopUp: boolean = false;
-  btnAdd!: any;
+  btnAdd!: ElementRef;
   nameTask: string = '';
   descTask: string = '';
   @Input() newTask: ContainerTaskComponent[] = [];

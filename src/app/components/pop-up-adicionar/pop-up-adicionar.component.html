@@ -6,6 +6,8 @@
       src="../../../assets/icons/xis.png"
       alt="ícone de xis para fechar o pop-up"
       (click)="booleanPopUp = !booleanPopUp"
+      tabindex="0"
+      (keyup)="($event.key === 'enter')"
     />
   </div>
   <div class="container-text-area">
@@ -28,7 +30,9 @@
     ></textarea>
   </div>
   <div class="container-add-btn">
-    <button (click)="addTask()">Adicionar</button>
+    <button (click)="addTask()" tabindex="0" (keyup)="($event.key === 'enter')">
+      Adicionar
+    </button>
   </div>
 </div>
 }
