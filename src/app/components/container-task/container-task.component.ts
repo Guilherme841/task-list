@@ -9,6 +9,7 @@ import { TaskService } from '../../services/task.service';
 import { CommonModule } from '@angular/common';
 import { HeaderService } from '../../services/header-service/header.service';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Router } from '@angular/router';
 
 interface Task {
   name: string;
@@ -30,7 +31,8 @@ export class ContainerTaskComponent implements OnInit {
     private _taskService: TaskService,
     private _headerService: HeaderService,
     private _elementRef: ElementRef,
-    private _renderer: Renderer2
+    private _renderer: Renderer2,
+    private _router: Router
   ) {}
 
   p: number = 1;
@@ -56,6 +58,10 @@ export class ContainerTaskComponent implements OnInit {
     HeaderService.togglePopUp.emit(this.btnAdd);
   }
   deleteTask(event: MouseEvent, name: string, desc: string) {
+    const data = {
+      elementRef: this.containerTask.nativeElement,
+    };
+    this._router.navigate(['/trash'], { queryParams: data });
     const findObjDel = this.arrTask.find(
       (arrTask) => arrTask.name === name && arrTask.desc === desc
     );
